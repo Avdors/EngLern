@@ -1,0 +1,15 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:elevation">@dimen/design_bottom_navigation_elevation</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemIconTint">@color/black</item>
+        <item name="itemTextColor">@android:color/transparent</item> <!-- Hide text labels -->
+    </style>
+
+    <!-- Create a custom text appearance style to hide text labels -->
+    <style name="AppBottomNavigationTextInactive">
+        <item name="android:textSize">0sp</item> <!-- Hide text labels completely -->
+    </style>
+
+</resources>

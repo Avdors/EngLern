@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dialogBottomNav"
+        android:icon="@drawable/ic_dialog"
+        android:title="@string/dialog"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/questionBottomNav"
+        android:icon="@drawable/ic_message_question"
+        android:title="@string/questions"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/historyBottomNav"
+        android:icon="@drawable/ic_history"
+        android:title="@string/history"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>

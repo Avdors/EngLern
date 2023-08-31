@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EngLern</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_message">Enter a message</string>
+    <string name="dating_guy">Dating a guy</string>
+    <string name="dating_girl">Dating a girl</string>
+    <string name="sales_negotiation">Sales negotiation</string>
+    <string name="supplier_negotiations">Supplier negotiations</string>
+    <string name="apartment_rental">Apartment rental</string>
+    <string name="dialog">Dialog AI</string>
+    <string name="questions">Questions</string>
+    <string name="history">History</string>
+    <string name="dialog_text">This is the dialog mode, choose a topic, on the top left corner, and let\'s talk</string>
+
+</resources>
