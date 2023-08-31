@@ -3,17 +3,15 @@ package com.example.englern.viewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.englern.models.Message
+import com.example.englern.models.MessageModel
 
-import kotlinx.coroutines.launch
 
 class ChatViewModel() : ViewModel() {
-    private val _messages = MutableLiveData<MutableList<Message>>(mutableListOf())
-    val messages: LiveData<MutableList<Message>> = _messages
+    private val _messages = MutableLiveData<MutableList<MessageModel>>(mutableListOf())
+    val messages: LiveData<MutableList<MessageModel>> = _messages
 
 
-    fun addMessage(message: Message) {
+    fun addMessage(message: MessageModel) {
         val updatedMessages = _messages.value.orEmpty().toMutableList()
         updatedMessages.add(message)
         _messages.value = updatedMessages
@@ -22,8 +20,6 @@ class ChatViewModel() : ViewModel() {
     fun clearMessages() {
         _messages.value = mutableListOf()
     }
-
-
 
 }
 

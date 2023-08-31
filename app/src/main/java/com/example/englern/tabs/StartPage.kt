@@ -40,5 +40,4 @@ class StartPage : Fragment(), ThemeFragment.ThemeSelectionListener {
         }
         sharedViewModel.updateSelectedTheme(theme,data)
     }
-
 }

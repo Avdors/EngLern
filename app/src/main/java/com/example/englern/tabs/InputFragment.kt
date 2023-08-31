@@ -10,7 +10,7 @@ import android.widget.ImageButton
 import androidx.fragment.app.activityViewModels
 import com.example.englern.databinding.FragmentInputBinding
 import com.example.englern.viewModels.ChatViewModel
-import com.example.englern.models.Message
+import com.example.englern.models.MessageModel
 import com.example.englern.models.SharedTheme
 import java.text.SimpleDateFormat
 import java.util.*
@@ -20,7 +20,8 @@ class InputFragment : Fragment() {
     private val viewModel: ChatViewModel by activityViewModels()
     private var binding: FragmentInputBinding? = null
     private val theme = SharedTheme.selectedTheme
-    private val currentData = SharedTheme.currentDateTime
+    private val dateThem = SharedTheme.currentDateTime
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +29,6 @@ class InputFragment : Fragment() {
         binding = FragmentInputBinding.inflate(inflater, container, false)
         return binding?.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val sendMessage: ImageButton = binding?.sendMessage!!
@@ -40,12 +40,11 @@ class InputFragment : Fragment() {
 
             val currentTime = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
 
-            val userMessage = Message(messageText, true, currentTime, theme.toString())
+            val userMessage = MessageModel(0, messageText, true, currentTime, theme.toString(), dateThem.toString())
 
             viewModel.addMessage(userMessage)
 
-
-            val replyMessage = Message("I received your message", false, currentTime, theme.toString())
+            val replyMessage = MessageModel(0, "I received your message", false, currentTime, theme.toString(), dateThem.toString())
             viewModel.addMessage(replyMessage)
 
             inputMessage.text.clear()

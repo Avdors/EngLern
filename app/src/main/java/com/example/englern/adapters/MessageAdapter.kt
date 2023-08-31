@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.englern.R
-import com.example.englern.models.Message
+import com.example.englern.models.MessageModel
 
-class MessageAdapter(private val messages: MutableList<Message>) :
+class MessageAdapter(private val messages: MutableList<MessageModel>) :
     RecyclerView.Adapter<MessageAdapter.MessageViewHolder>() {
 
     companion object {
@@ -39,18 +39,18 @@ class MessageAdapter(private val messages: MutableList<Message>) :
 
     override fun getItemCount() = messages.size
 
-    fun addMessage(message: Message) {
+    fun addMessage(message: MessageModel) {
         messages.add(message)
         notifyItemInserted(messages.size - 1)
     }
 
-    fun updateMessages(newMessages: MutableList<Message>) {
+    fun updateMessages(newMessages: MutableList<MessageModel>) {
         messages.clear()
         messages.addAll(newMessages)
-        notifyDataSetChanged()
+
     }
 
-    fun setList(newMessages: MutableList<Message>) {
+    fun setList(newMessages: MutableList<MessageModel>) {
         messages.clear()
         messages.addAll(newMessages)
 

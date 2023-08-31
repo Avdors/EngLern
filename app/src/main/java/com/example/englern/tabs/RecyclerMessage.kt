@@ -50,6 +50,7 @@ class RecyclerMessage : Fragment() {
             // Clear the messages and update UI when theme changes
             viewModel.clearMessages() // You'll need to implement this function
             messageAdapter.updateMessages(mutableListOf())
+            messageAdapter.notifyDataSetChanged()
         }
 //        viewModel.messages.observe(viewLifecycleOwner) { messages ->
 //            messageAdapter.updateMessages(messages.toMutableList())
@@ -61,6 +62,7 @@ class RecyclerMessage : Fragment() {
             // Handle other cases or other sources of messages
             viewModel.messages.observe(viewLifecycleOwner) { messages ->
                 messageAdapter.updateMessages(messages.toMutableList())
+                messageAdapter.notifyDataSetChanged()
                 binding?.chatRecyclerView?.scrollToPosition(messages.size - 1)
             }
 
