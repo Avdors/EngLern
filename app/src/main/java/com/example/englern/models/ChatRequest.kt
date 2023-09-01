@@ -1,4 +1,5 @@
 package com.example.englern.models
 
-class ChatRequest {
+data class ChatRequest(val messages: List<MessageApi>) {
+
 }

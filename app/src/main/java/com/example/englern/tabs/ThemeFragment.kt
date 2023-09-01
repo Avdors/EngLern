@@ -38,7 +38,7 @@ class ThemeFragment : BottomSheetDialogFragment() {
         val dateFormat = SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault())
         listView.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, themes)
         listView.setOnItemClickListener { _, _, position, _ ->
-            listener?.onThemeSelected(themes[position],dateFormat.toString())
+            listener?.onThemeSelected(themes[position],dateFormat.format(Date()))
             dismiss()
         }
     }

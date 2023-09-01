@@ -6,7 +6,7 @@ import com.example.englern.databinding.ActivityMainBinding
 import com.example.englern.tabs.InputFragment
 import com.example.englern.tabs.RecyclerMessage
 import com.example.englern.tabs.StartPage
-import com.example.englern.tabs.TestFragment
+import com.example.englern.tabs.HistoryFragment
 
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
@@ -33,14 +33,14 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.questionBottomNav -> supportFragmentManager.beginTransaction().apply {
                     replace(R.id.panel, StartPage())
-                    replace(R.id.recycler, TestFragment())
+                    replace(R.id.recycler, HistoryFragment())
                     replace(R.id.content, InputFragment())
                     commit()
                 }
                 R.id.historyBottomNav -> supportFragmentManager.beginTransaction().apply {
                     replace(R.id.panel, StartPage())
-                    replace(R.id.recycler, TestFragment())
-                    replace(R.id.content, InputFragment())
+                    replace(R.id.recycler, HistoryFragment())
+                    //replace(R.id.content, InputFragment())
                     commit()
                 }
             }

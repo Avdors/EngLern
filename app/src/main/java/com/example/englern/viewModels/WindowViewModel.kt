@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.englern.models.MessageModel
 
-class WimdowViewModel(): ViewModel() {
+class WindowViewModel(): ViewModel() {
     private val _messages = MutableLiveData<MutableList<MessageModel>>(mutableListOf())
     val messages: LiveData<MutableList<MessageModel>> = _messages
 
@@ -18,6 +18,15 @@ class WimdowViewModel(): ViewModel() {
 
     fun clearMessages() {
         _messages.value = mutableListOf()
+    }
+
+    fun removeLastMessage() {
+        _messages.value?.let {
+            if (it.isNotEmpty()) {
+                it.removeAt(it.size - 1)
+                _messages.value = it
+            }
+        }
     }
 
 }

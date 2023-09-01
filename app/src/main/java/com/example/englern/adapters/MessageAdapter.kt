@@ -22,7 +22,7 @@ class MessageAdapter(private val messages: MutableList<MessageModel>) :
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (messages[position].isUserMessage) VIEW_TYPE_USER else VIEW_TYPE_PROGRAM
+        return if (messages[position].isUserMessage == 1) VIEW_TYPE_USER else VIEW_TYPE_PROGRAM
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {

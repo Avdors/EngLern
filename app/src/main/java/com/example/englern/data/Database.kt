@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.englern.data.MessDao
 import com.example.englern.models.MessageModel
 
 @Database(entities = [MessageModel::class], version = 2)
@@ -30,6 +31,8 @@ abstract class Database: RoomDatabase() {
         }
     }
 }
+
+
 
 val MIGRATION_1_2 = object: Migration(1, 2) {
     override fun migrate(database: SupportSQLiteDatabase) {

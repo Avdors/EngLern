@@ -9,11 +9,11 @@ import androidx.room.PrimaryKey
 data class MessageModel(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "mess_id")
-    var id : Int,
+    var id: Int,
     @ColumnInfo(name = "mess_text")
     var text: String,
     @ColumnInfo(name = "user_mess")
-    var isUserMessage: Boolean,
+    var isUserMessage: Int,
     @ColumnInfo(name = "mess_time")
     var time: String,
     @ColumnInfo(name = "mess_theme")

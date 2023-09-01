@@ -1,4 +1,4 @@
 package com.example.englern.models
 
-class Choice {
+data class Choice(val message: MessageApi) {
 }

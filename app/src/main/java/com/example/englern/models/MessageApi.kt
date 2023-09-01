@@ -1,4 +1,4 @@
 package com.example.englern.models
 
-class MessageApi {
+data class MessageApi(val role: String, val content: String) {
 }

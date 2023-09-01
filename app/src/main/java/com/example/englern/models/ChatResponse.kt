@@ -1,4 +1,4 @@
 package com.example.englern.models
 
-class ChatResponse {
+data class ChatResponse(val message: String) {
 }

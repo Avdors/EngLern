@@ -10,6 +10,7 @@
         <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/fragment_history.xml" value="0.3359375" />
         <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/fragment_input.xml" value="0.3359375" />
+        <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/fragment_test.xml" value="0.33177083333333335" />
         <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/fragment_theme.xml" value="0.3359375" />
         <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/history_item.xml" value="0.40296662546353523" />
         <entry key="..\:/java/Kotlin/Git/MappBU/EngLern/app/src/main/res/layout/message_item.xml" value="0.41719342604298354" />
@@ -23,7 +24,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
